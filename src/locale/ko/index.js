@@ -29,22 +29,24 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 /**
  * @type {Locale}
  * @category Locales
- * @summary Korean locale.
- * @language Korean
- * @iso-639-2 kor
- * @author Hong Chulju [@angdev]{@link https://github.com/angdev}
+ * @summary Finnish locale.
+ * @language Finnish
+ * @iso-639-2 fin
+ * @author Pyry-Samuli Lahti [@Pyppe]{@link https://github.com/Pyppe}
+ * @author Edo Rivai [@mikolajgrzyb]{@link https://github.com/mikolajgrzyb}
+ * @author Samu Juvonen [@sjuvonen]{@link https://github.com/sjuvonen}
  */
 var locale = {
-    formatDistance: _index2.default,
-    formatLong: _index4.default,
-    formatRelative: _index6.default,
-    localize: _index8.default,
-    match: _index10.default,
-    options: {
-      weekStartsOn: 0 /* Sunday */
-      , firstWeekContainsDate: 1
-    }
-  };
+  formatDistance: _index2.default,
+  formatLong: _index4.default,
+  formatRelative: _index6.default,
+  localize: _index8.default,
+  match: _index10.default,
+  options: {
+    weekStartsOn: 1 /* Monday */
+    , firstWeekContainsDate: 4
+  }
+};
 
- exports.default = locale;
- module.exports = exports['default'];
+exports.default = locale;
+module.exports = exports['default'];
