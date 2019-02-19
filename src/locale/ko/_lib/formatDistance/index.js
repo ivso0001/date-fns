@@ -1,3 +1,10 @@
+'use strict';
+
+Object.defineProperty(exports, "__esModule", {
+  value: true
+});
+exports.default = formatDistance;
+
 var formatDistanceLocale = {
   lessThanXSeconds: {
     one: '1초 미만',
@@ -67,25 +74,20 @@ var formatDistanceLocale = {
   }
 }
 
-export default function formatDistance (token, count, options) {
-  options = options || {}
+function formatDistance(token, count, options) {
+  options = options || {};
 
-  var result
-  if (typeof formatDistanceLocale[token] === 'string') {
-    result = formatDistanceLocale[token]
-  } else if (count === 1) {
-    result = formatDistanceLocale[token].one
-  } else {
-    result = formatDistanceLocale[token].other.replace('{{count}}', count)
-  }
+  var distance = formatDistanceLocale[token];
+  var result = count === 1 ? distance.one : distance.other.replace('{{count}}', count);
 
   if (options.addSuffix) {
     if (options.comparison > 0) {
-      return result + ' 후'
+      return distance.futureTense(result) + ' kuluttua';
     } else {
-      return result + ' 전'
+      return result + ' sitten';
     }
   }
 
-  return result
+  return result;
 }
+module.exports = exports['default'];

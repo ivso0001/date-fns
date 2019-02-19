@@ -29,13 +29,12 @@ function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { de
 /**
  * @type {Locale}
  * @category Locales
- * @summary Finnish locale.
- * @language Finnish
- * @iso-639-2 fin
- * @author Pyry-Samuli Lahti [@Pyppe]{@link https://github.com/Pyppe}
- * @author Edo Rivai [@mikolajgrzyb]{@link https://github.com/mikolajgrzyb}
- * @author Samu Juvonen [@sjuvonen]{@link https://github.com/sjuvonen}
+ * @summary Korean locale.
+ * @language Korean
+ * @iso-639-2 kor
+ * @author Hong Chulju [@angdev]{@link https://github.com/angdev}
  */
+
 var locale = {
   formatDistance: _index2.default,
   formatLong: _index4.default,
